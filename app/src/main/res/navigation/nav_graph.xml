@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/log_in">
+
+    <fragment
+        android:id="@+id/rootFragment"
+        android:name="com.example.fragmentsnavigation.RootFragment"
+        android:label="fragment_root"
+        tools:layout="@layout/fragment_root" >
+        <action
+            android:id="@+id/action_rootFragment_to_blankFragment"
+            app:destination="@id/blankFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@anim/my_slide_in_left"
+
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_rootFragment_to_navigation"
+            app:destination="@id/navigation" />
+    </fragment>
+    <fragment
+        android:id="@+id/blankFragment"
+        android:name="com.example.fragmentsnavigation.BlankFragment"
+        android:label="fragment_blank"
+        tools:layout="@layout/fragment_blank" >
+        <argument
+            android:name="Cat"
+            app:argType="string"
+            android:defaultValue="Barsic" />
+    </fragment>
+    <navigation android:id="@+id/navigation"
+        app:startDestination="@id/blankFragment2">
+        <fragment
+            android:id="@+id/blankFragment2"
+            android:name="com.example.fragmentsnavigation.BlankFragment2"
+            android:label="fragment_blank2"
+            tools:layout="@layout/fragment_blank2">
+            <action
+                android:id="@+id/action_blankFragment2_to_blankFragment3"
+                app:destination="@id/blankFragment3" />
+        </fragment>
+        <fragment
+            android:id="@+id/blankFragment3"
+            android:name="com.example.fragmentsnavigation.BlankFragment3"
+            android:label="fragment_blank3"
+            tools:layout="@layout/fragment_blank3" />
+    </navigation>
+    <fragment
+        android:id="@+id/settingsfrag"
+        android:name="com.example.fragmentsnavigation.settingsfrag"
+        android:label="fragment_settingsfrag"
+        tools:layout="@layout/fragment_settingsfrag" />
+    <fragment
+        android:id="@+id/log_in"
+        android:name="com.example.fragmentsnavigation.log_in"
+        android:label="fragment_log_in"
+        tools:layout="@layout/fragment_log_in" >
+        <action
+            android:id="@+id/action_log_in_to_pass_test"
+            app:destination="@id/pass_test" />
+    </fragment>
+    <fragment
+        android:id="@+id/results"
+        android:name="com.example.fragmentsnavigation.results"
+        android:label="fragment_results"
+        tools:layout="@layout/fragment_results" />
+    <fragment
+        android:id="@+id/about_me"
+        android:name="com.example.fragmentsnavigation.about_me"
+        android:label="fragment_about_me"
+        tools:layout="@layout/fragment_about_me" />
+    <fragment
+        android:id="@+id/pass_test"
+        android:name="com.example.fragmentsnavigation.pass_test"
+        android:label="fragment_pass_test"
+        tools:layout="@layout/fragment_pass_test" >
+        <action
+            android:id="@+id/action_pass_test_to_test1"
+            app:destination="@id/test1" />
+    </fragment>
+    <fragment
+        android:id="@+id/test1"
+        android:name="com.example.fragmentsnavigation.test1"
+        android:label="fragment_test1"
+        tools:layout="@layout/fragment_test1" >
+        <action
+            android:id="@+id/action_test1_to_test2"
+            app:destination="@id/test2" />
+    </fragment>
+    <fragment
+        android:id="@+id/test2"
+        android:name="com.example.fragmentsnavigation.test2"
+        android:label="fragment_test2"
+        tools:layout="@layout/fragment_test2" />
+</navigation>

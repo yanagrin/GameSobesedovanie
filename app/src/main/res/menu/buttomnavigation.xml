@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<item android:id="@+id/pass_test"
+    android:title="Root"
+    android:icon="@drawable/ic_launcher_foreground"></item>
+    <item android:id="@+id/results"
+        android:title="Root"
+        android:icon="@drawable/baseline_accessibility_24"></item>
+    <item android:id="@+id/about_me"
+        android:title="Root"
+        android:icon="@drawable/ic_launcher_foreground"></item>
+</menu>
