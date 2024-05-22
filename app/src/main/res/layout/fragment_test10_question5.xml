@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".test6_question1"
+    tools:context=".test10_question5"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
@@ -14,7 +14,7 @@
         android:gravity="center"
         android:textSize="20dp"
         android:textColor="#660066"
-        android:text="Вопрос 1"
+        android:text="Вопрос 5"
         android:layout_margin="10dp">
     </TextView>
 

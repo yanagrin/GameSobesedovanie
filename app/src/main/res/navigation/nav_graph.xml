@@ -131,5 +131,59 @@
         android:id="@+id/test6_question1"
         android:name="com.example.fragmentsnavigation.test6_question1"
         android:label="fragment_test6_question1"
-        tools:layout="@layout/fragment_test6_question1" />
+        tools:layout="@layout/fragment_test6_question1" >
+        <action
+            android:id="@+id/action_test6_question1_to_test7_question2"
+            app:destination="@id/test7_question2" />
+    </fragment>
+    <fragment
+        android:id="@+id/test7_question2"
+        android:name="com.example.fragmentsnavigation.test7_question2"
+        android:label="fragment_test7_question2"
+        tools:layout="@layout/fragment_test7_question2" >
+        <action
+            android:id="@+id/action_test7_question2_to_test8_question3"
+            app:destination="@id/test8_question3" />
+    </fragment>
+    <fragment
+        android:id="@+id/test8_question3"
+        android:name="com.example.fragmentsnavigation.test8_question3"
+        android:label="fragment_test8_question3"
+        tools:layout="@layout/fragment_test8_question3" >
+        <action
+            android:id="@+id/action_test8_question3_to_test9_question4"
+            app:destination="@id/test9_question4" />
+    </fragment>
+    <fragment
+        android:id="@+id/test9_question4"
+        android:name="com.example.fragmentsnavigation.test9_question4"
+        android:label="fragment_test9_question4"
+        tools:layout="@layout/fragment_test9_question4" >
+        <action
+            android:id="@+id/action_test9_question4_to_test10_question5"
+            app:destination="@id/test10_question5" />
+    </fragment>
+    <fragment
+        android:id="@+id/test10_question5"
+        android:name="com.example.fragmentsnavigation.test10_question5"
+        android:label="fragment_test10_question5"
+        tools:layout="@layout/fragment_test10_question5" >
+        <action
+            android:id="@+id/action_test10_question5_to_test11"
+            app:destination="@id/test11" />
+    </fragment>
+    <fragment
+        android:id="@+id/test11"
+        android:name="com.example.fragmentsnavigation.test11"
+        android:label="fragment_test11"
+        tools:layout="@layout/fragment_test11" >
+        <action
+            android:id="@+id/action_test11_to_test12"
+            app:destination="@id/test12" />
+    </fragment>
+    <fragment
+        android:id="@+id/test12"
+        android:name="com.example.fragmentsnavigation.test12"
+        android:label="fragment_test12"
+        tools:layout="@layout/fragment_test12" />
 </navigation>
