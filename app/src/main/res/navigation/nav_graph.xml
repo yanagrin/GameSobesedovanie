@@ -95,5 +95,41 @@
         android:id="@+id/test2"
         android:name="com.example.fragmentsnavigation.test2"
         android:label="fragment_test2"
-        tools:layout="@layout/fragment_test2" />
+        tools:layout="@layout/fragment_test2" >
+        <action
+            android:id="@+id/action_test2_to_test3"
+            app:destination="@id/test3" />
+    </fragment>
+    <fragment
+        android:id="@+id/test3"
+        android:name="com.example.fragmentsnavigation.test3"
+        android:label="fragment_test3"
+        tools:layout="@layout/fragment_test3" >
+        <action
+            android:id="@+id/action_test3_to_test4"
+            app:destination="@id/test4" />
+    </fragment>
+    <fragment
+        android:id="@+id/test4"
+        android:name="com.example.fragmentsnavigation.test4"
+        android:label="fragment_test4"
+        tools:layout="@layout/fragment_test4" >
+        <action
+            android:id="@+id/action_test4_to_test5"
+            app:destination="@id/test5" />
+    </fragment>
+    <fragment
+        android:id="@+id/test5"
+        android:name="com.example.fragmentsnavigation.test5"
+        android:label="fragment_test5"
+        tools:layout="@layout/fragment_test5" >
+        <action
+            android:id="@+id/action_test5_to_test6_question1"
+            app:destination="@id/test6_question1" />
+    </fragment>
+    <fragment
+        android:id="@+id/test6_question1"
+        android:name="com.example.fragmentsnavigation.test6_question1"
+        android:label="fragment_test6_question1"
+        tools:layout="@layout/fragment_test6_question1" />
 </navigation>

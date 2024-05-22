@@ -12,10 +12,10 @@ import android.widget.Button;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link test2#newInstance} factory method to
+ * Use the {@link test3#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class test2 extends Fragment {
+public class test3 extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -26,7 +26,7 @@ public class test2 extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public test2() {
+    public test3() {
         // Required empty public constructor
     }
 
@@ -36,11 +36,11 @@ public class test2 extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment test2.
+     * @return A new instance of fragment test3.
      */
     // TODO: Rename and change types and number of parameters
-    public static test2 newInstance(String param1, String param2) {
-        test2 fragment = new test2();
+    public static test3 newInstance(String param1, String param2) {
+        test3 fragment = new test3();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -60,14 +60,14 @@ public class test2 extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_test2, container, false);
-        Button b1 = view.findViewById(R.id.BT1);
+        View view = inflater.inflate(R.layout.fragment_test3, container, false);
+        Button b1 = view.findViewById(R.id.START);
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Bundle bundle = new Bundle();
                 bundle.putString("Cat", "Persik");
-                Navigation.findNavController(view).navigate(R.id.action_test2_to_test3, bundle);
+                Navigation.findNavController(view).navigate(R.id.action_test3_to_test4, bundle);
             }
         });
         return view;

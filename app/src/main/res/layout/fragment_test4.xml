@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".test2"
+    tools:context=".test4"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
@@ -10,55 +10,56 @@
     <TextView
         android:id="@+id/TV"
         android:layout_width="match_parent"
-        android:layout_margin="10dp"
         android:layout_height="90dp"
         android:gravity="center"
-        android:textSize="25dp"
+        android:layout_margin="5dp"
+        android:textSize="22dp"
         android:textColor="#660066"
-        android:text="Кем вы хотите работать?">
+        android:text="К какому кадровику вы сядете?">
     </TextView>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="170dp"
-        android:layout_margin="10dp">
+        android:layout_height="170dp">
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="match_parent"
+            android:layout_width="140dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:src="@drawable/prodavetc" />
+            android:layout_margin="5dp"
+            android:src="@drawable/kadrovik1" />
         <ImageView
             android:id="@+id/imageView2"
-            android:layout_width="match_parent"
+            android:layout_width="130dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:src="@drawable/programist" />
+            android:layout_margin="5dp"
+            android:src="@drawable/kadrovik2" />
     </LinearLayout>
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:layout_margin="10dp">
+        android:layout_margin="5dp">
         <Button
             android:id="@+id/BT1"
-            android:text="Продавец"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="40dp"
+            android:text="1"
+            android:textSize="15dp"
             android:layout_weight="1"
             android:layout_margin="10dp"
-            android:textSize="15dp"
             android:backgroundTint="#8c4566">
             ></Button>
         <Button
             android:id="@+id/BT2"
-            android:text="Программист"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="40dp"
+            android:text="2"
+            android:textSize="15dp"
             android:layout_weight="1"
             android:layout_margin="10dp"
-            android:textSize="15dp"
             android:backgroundTint="#8c4566">
             ></Button>
     </LinearLayout>
@@ -68,15 +69,16 @@
         android:layout_height="50dp"
         android:orientation="horizontal"
         android:gravity="center"
-        android:layout_margin="20dp">
+        android:layout_margin="25dp">
         <Button
             android:id="@+id/BACK"
-            android:text="Назад"
             android:textSize="15dp"
             android:layout_width="150dp"
             android:layout_height="50dp"
+            android:text="Назад"
             android:backgroundTint="#ee9086">
         </Button>
 
     </LinearLayout>
+
 </LinearLayout>
