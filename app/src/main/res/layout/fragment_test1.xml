@@ -64,20 +64,5 @@
             ></Button>
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:orientation="horizontal"
-        android:gravity="center"
-        android:layout_margin="20dp">
-        <Button
-            android:id="@+id/BACK"
-            android:text="Назад"
-            android:textSize="15dp"
-            android:layout_width="150dp"
-            android:layout_height="50dp"
-            android:backgroundTint="#ee9086">
-        </Button>
 
-    </LinearLayout>
 </LinearLayout>

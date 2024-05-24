@@ -60,16 +60,6 @@
         android:layout_margin="10dp">
 
         <Button
-            android:id="@+id/BACK"
-            android:layout_width="150dp"
-            android:layout_height="50dp"
-            android:backgroundTint="#ee9086"
-            android:text="Назад"
-            android:textSize="15dp"
-            android:layout_weight="1"
-            android:layout_margin="10dp"></Button>
-
-        <Button
             android:id="@+id/NEXT"
             android:layout_width="150dp"
             android:layout_height="50dp"

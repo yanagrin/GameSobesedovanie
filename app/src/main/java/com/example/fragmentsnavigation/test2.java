@@ -65,6 +65,7 @@ public class test2 extends Fragment {
                 Bundle bundle = new Bundle();
                 bundle.putString("player", mParam1);
                 bundle.putString("profession", "seller");
+                User.profession_on_last_try = "seller";
                 Navigation.findNavController(view).navigate(R.id.action_test2_to_test3, bundle);
             }
         });
@@ -75,6 +76,7 @@ public class test2 extends Fragment {
                 Bundle bundle = new Bundle();
                 bundle.putString("player", mParam1);
                 bundle.putString("profession", "programmer");
+                User.profession_on_last_try = "programmer";
                 Navigation.findNavController(view).navigate(R.id.action_test2_to_test3, bundle);
             }
         });

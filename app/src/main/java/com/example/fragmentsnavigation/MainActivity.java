@@ -67,8 +67,10 @@ public class MainActivity extends AppCompatActivity {
                     authentication.login_or_register(usernameEditText.getText(), passwordEditText.getText(), new LoginCallback() {
                         @Override
                         public void onLoginSuccess() {
+                            User.email = String.valueOf(usernameEditText.getText());
+
                             Intent intent = new Intent(MainActivity.this, Game.class);
-                            intent.putExtra("key1", "0");
+                            intent.putExtra("email", String.valueOf(usernameEditText.getText()));
                             startActivityForResult(intent, 134);
                         }
 

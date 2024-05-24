@@ -68,6 +68,7 @@ public class pass_test extends Fragment {
         passTest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                User.q_of_tests +=1;
                 Bundle bundle = new Bundle();
                 bundle.putString("Cat", "Persik");
                 Navigation.findNavController(view).navigate(R.id.action_pass_test_to_test1, bundle);

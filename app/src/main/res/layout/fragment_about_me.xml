@@ -1,23 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:layout_gravity="center"
-    tools:context=".about_me">
+    android:layout_marginStart="40dp"
+    android:layout_marginTop="80dp"
+    android:layout_marginEnd="40dp"
+    android:layout_marginBottom="40dp"
+    android:background="#c8a99e"
+    tools:context=".about_me"
+    >
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:text="Информация о пользователе"
+        android:textColor="#660066"
+        android:layout_marginBottom="40dp"
+        android:textSize="20dp"/>
+    <TextView
+        android:id="@+id/TV"
+        android:textSize="15dp"
+        android:textColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="400dp"
+        android:text="@string/hello_blank_fragment"
+        />
     <Button
         android:layout_gravity="center"
         android:id="@+id/LOG_OUT"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Выйти"
-        android:textSize="20dp"></Button>
+        android:textSize="20dp"
+        android:backgroundTint="#ee9086"
+        android:textColor="#660066"></Button>
 
-</FrameLayout>
+</LinearLayout>

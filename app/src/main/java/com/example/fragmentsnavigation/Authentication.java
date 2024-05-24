@@ -10,6 +10,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
+import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -23,6 +24,7 @@ public class Authentication {
         Matcher matcher = pattern.matcher(emailAddress);
 
         if (password.length()>5 && emailAddress.contains("@") && matcher.matches()){
+
             return 1;
         }
         else{
@@ -76,6 +78,7 @@ public class Authentication {
     }
 
     public void log_out(){
+
         FirebaseAuth auth1 = FirebaseAuth.getInstance();
         auth1.signOut();
         Log.w("BBBsignOUT", "IsOut");

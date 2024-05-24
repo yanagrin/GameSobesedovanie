@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 <item android:id="@+id/pass_test"
-    android:title="Root"
-    android:icon="@drawable/ic_launcher_foreground"></item>
+    android:title="Тест"
+    android:icon="@drawable/baseline_text_snippet_24"></item>
     <item android:id="@+id/results"
-        android:title="Root"
-        android:icon="@drawable/baseline_accessibility_24"></item>
+        android:title="Попытки"
+        android:icon="@drawable/baseline_assignment_turned_in_24"></item>
     <item android:id="@+id/about_me"
-        android:title="Root"
-        android:icon="@drawable/ic_launcher_foreground"></item>
+        android:title="Обо мне"
+        android:icon="@drawable/baseline_face_retouching_natural_24"></item>
 </menu>

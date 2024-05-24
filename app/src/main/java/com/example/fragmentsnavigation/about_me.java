@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -79,5 +80,9 @@ public class about_me extends Fragment {
 
             }
         });
+
+        TextView tv = view.findViewById(R.id.TV);
+        tv.setText("Логин "+User.email);
+
         return view;}
 }

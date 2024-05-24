@@ -74,6 +74,7 @@ public class test11 extends Fragment {
         TextView tv = view.findViewById(R.id.TV);
         EndTest end = new EndTest();
         end.doo(q1,q2,q3,q4,q5);
+        end.bd();
         Log.d("END1", " "+q1+q2+q3+q4+q5);
         if (end.doo(q1,q2,q3,q4,q5)==1){
             tv.setText("Поздравляем, вы приняты!");
