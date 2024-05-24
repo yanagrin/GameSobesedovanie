@@ -19,8 +19,8 @@ public class test3 extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
+    private static final String ARG_PARAM1 = "player";
+    private static final String ARG_PARAM2 = "profession";
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -66,7 +66,8 @@ public class test3 extends Fragment {
             @Override
             public void onClick(View v) {
                 Bundle bundle = new Bundle();
-                bundle.putString("Cat", "Persik");
+                bundle.putString("player", mParam1);
+                bundle.putString("profession", mParam2);
                 Navigation.findNavController(view).navigate(R.id.action_test3_to_test4, bundle);
             }
         });

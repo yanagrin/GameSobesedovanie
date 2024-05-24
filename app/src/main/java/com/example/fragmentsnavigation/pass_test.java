@@ -10,6 +10,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link pass_test#newInstance} factory method to
@@ -60,6 +62,7 @@ public class pass_test extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
         View view = inflater.inflate(R.layout.fragment_pass_test, container, false);
         Button passTest = view.findViewById(R.id.PASS_TEST);
         passTest.setOnClickListener(new View.OnClickListener() {

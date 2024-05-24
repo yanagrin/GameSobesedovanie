@@ -9,6 +9,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import com.example.fragmentsnavigation.MainActivity;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -25,10 +27,8 @@ public class log_in extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    public Boolean isLogIn=false;
 
-    public log_in() {
-        // Required empty public constructor
-    }
 
     /**
      * Use this factory method to create a new instance of
@@ -62,8 +62,11 @@ public class log_in extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_log_in, container, false);
         Button logIn = view.findViewById(R.id.LOGIN);
-        //переход на другой фрагмент
+
+        // переход на другой фрагмент
+        isLogIn = true;
         logIn.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_log_in_to_pass_test));
+        
         return view;
     }
 }

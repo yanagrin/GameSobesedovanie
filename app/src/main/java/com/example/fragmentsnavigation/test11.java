@@ -5,10 +5,12 @@ import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -17,14 +19,15 @@ import android.widget.Button;
  */
 public class test11 extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
+    private static final String ARG_PARAM1 = "player";
+    private static final String ARG_PARAM2 = "profession";
+    private static final String ARG_PARAM3 = "hr";
+    private static final String ARG_PARAM4 = "q1";
+    private static final String ARG_PARAM5 = "q2";
+    private static final String ARG_PARAM6 = "q3";
+    private static final String ARG_PARAM7 = "q4";
+    private static final String ARG_PARAM8 = "q5";
+    private String player, profession, hr, q1, q2, q3, q4, q5;
 
     public test11() {
         // Required empty public constructor
@@ -52,8 +55,14 @@ public class test11 extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
+            player = getArguments().getString(ARG_PARAM1);
+            profession = getArguments().getString(ARG_PARAM2);
+            hr = getArguments().getString(ARG_PARAM3);
+            q1 = getArguments().getString(ARG_PARAM4);
+            q2 = getArguments().getString(ARG_PARAM5);
+            q3 = getArguments().getString(ARG_PARAM6);
+            q4 = getArguments().getString(ARG_PARAM7);
+            q5 = getArguments().getString(ARG_PARAM8);
         }
     }
 
@@ -61,12 +70,22 @@ public class test11 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_test11, container, false);
+
+        TextView tv = view.findViewById(R.id.TV);
+        EndTest end = new EndTest();
+        end.doo(q1,q2,q3,q4,q5);
+        Log.d("END1", " "+q1+q2+q3+q4+q5);
+        if (end.doo(q1,q2,q3,q4,q5)==1){
+            tv.setText("Поздравляем, вы приняты!");
+        }
+        else {
+            tv.setText("Мы вам перезвоним ...");
+        }
         Button next = view.findViewById(R.id.NEXT);
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Bundle bundle = new Bundle();
-                bundle.putString("Cat", "Persik");
                 Navigation.findNavController(view).navigate(R.id.action_test11_to_test12, bundle);
             }
         });
