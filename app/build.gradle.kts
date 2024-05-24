@@ -1,4 +1,8 @@
 plugins {
+    //id("com.android.application")
+    // Add the Google services Gradle plugin
+    id("com.google.gms.google-services")
+
     alias(libs.plugins.androidApplication)
 }
 
@@ -36,12 +40,23 @@ dependencies {
     implementation("android.arch.navigation:navigation-fragment:1.0.0")
     implementation("android.arch.navigation:navigation-ui:1.0.0")
 
+    // Import the Firebase BoM
+    implementation(platform("com.google.firebase:firebase-bom:33.0.0"))
+    // TODO: Add the dependencies for Firebase products you want to use
+    // When using the BoM, don't specify versions in Firebase dependencies
+    implementation("com.google.firebase:firebase-analytics")
+    // Add the dependencies for any other desired Firebase products
+    // https://firebase.google.com/docs/android/setup#available-libraries
+
+    implementation("com.google.firebase:firebase-auth")
+
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)
     implementation(libs.constraintlayout)
     implementation(libs.navigation.fragment)
     implementation(libs.navigation.ui)
+    implementation(libs.firebase.firestore)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)

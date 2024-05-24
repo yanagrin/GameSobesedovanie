@@ -24,6 +24,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
     Boolean f = true;
+    Integer O=-10;
 
     Button bt;
 
@@ -55,16 +56,30 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Authentication authentication = new Authentication();
-                if (authentication.sign_in_or_register(usernameEditText.getText(),passwordEditText.getText())==1){
-                    Intent intent = new Intent(MainActivity.this, Game.class);
-                    intent.putExtra("key1", "0");
-                    startActivityForResult(intent, 134);
-                }
-                else {
+                int check_email_and_passw =authentication.check_email_and_password(usernameEditText.getText(),passwordEditText.getText());
+                //authentication.login(usernameEditText.getText(),passwordEditText.getText());
+                if (check_email_and_passw==2){
                     Toast toast = Toast.makeText(getApplicationContext(),
-                            "Какая-то ошибка", Toast.LENGTH_SHORT);
+                            "Логин или пароль не соответствуют требованиям", Toast.LENGTH_SHORT);
                     toast.show();
                 }
+                else {
+                    authentication.login_or_register(usernameEditText.getText(), passwordEditText.getText(), new LoginCallback() {
+                        @Override
+                        public void onLoginSuccess() {
+                            Intent intent = new Intent(MainActivity.this, Game.class);
+                            intent.putExtra("key1", "0");
+                            startActivityForResult(intent, 134);
+                        }
+
+                        @Override
+                        public void onLoginFailure(String errorMessage) {
+                            // Обработка ошибки регистрации
+                        }
+                    });
+                }
+
+
 
             }
         });
@@ -77,7 +92,5 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-
-
-
 }
+

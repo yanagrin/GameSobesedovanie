@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "820275696632",
+    "project_id": "gamesobesedovanie",
+    "storage_bucket": "gamesobesedovanie.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:820275696632:android:db36e90f8da370ad8f7c0d",
+        "android_client_info": {
+          "package_name": "com.example.fragmentsnavigation"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC1VLWwUc6Ch3dHt14q10XYPV_HBIghlrI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
