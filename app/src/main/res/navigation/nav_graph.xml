@@ -6,15 +6,6 @@
     app:startDestination="@id/pass_test">
 
     <fragment
-        android:id="@+id/log_in"
-        android:name="com.example.fragmentsnavigation.log_in"
-        android:label="fragment_log_in"
-        tools:layout="@layout/fragment_log_in" >
-        <action
-            android:id="@+id/action_log_in_to_pass_test"
-            app:destination="@id/pass_test" />
-    </fragment>
-    <fragment
         android:id="@+id/results"
         android:name="com.example.fragmentsnavigation.results"
         android:label="Результаты"
@@ -26,7 +17,7 @@
         tools:layout="@layout/fragment_about_me" />
     <fragment
         android:id="@+id/pass_test"
-        android:name="com.example.fragmentsnavigation.pass_test"
+        android:name="com.example.fragmentsnavigation.test_frag.pass_test"
         android:label="Пройти тест"
         tools:layout="@layout/fragment_pass_test" >
         <action
@@ -35,7 +26,7 @@
     </fragment>
     <fragment
         android:id="@+id/test1"
-        android:name="com.example.fragmentsnavigation.test1"
+        android:name="com.example.fragmentsnavigation.test_frag.test1"
         android:label="Тест"
         tools:layout="@layout/fragment_test1" >
         <action
@@ -44,7 +35,7 @@
     </fragment>
     <fragment
         android:id="@+id/test2"
-        android:name="com.example.fragmentsnavigation.test2"
+        android:name="com.example.fragmentsnavigation.test_frag.test2"
         android:label="Тест"
         tools:layout="@layout/fragment_test2" >
         <action
@@ -53,7 +44,7 @@
     </fragment>
     <fragment
         android:id="@+id/test3"
-        android:name="com.example.fragmentsnavigation.test3"
+        android:name="com.example.fragmentsnavigation.test_frag.test3"
         android:label="Тест"
         tools:layout="@layout/fragment_test3" >
         <action
@@ -62,7 +53,7 @@
     </fragment>
     <fragment
         android:id="@+id/test4"
-        android:name="com.example.fragmentsnavigation.test4"
+        android:name="com.example.fragmentsnavigation.test_frag.test4"
         android:label="Тест"
         tools:layout="@layout/fragment_test4" >
         <action
@@ -71,7 +62,7 @@
     </fragment>
     <fragment
         android:id="@+id/test5"
-        android:name="com.example.fragmentsnavigation.test5"
+        android:name="com.example.fragmentsnavigation.test_frag.test5"
         android:label="Тест"
         tools:layout="@layout/fragment_test5" >
         <action
@@ -80,7 +71,7 @@
     </fragment>
     <fragment
         android:id="@+id/test6_question1"
-        android:name="com.example.fragmentsnavigation.test6_question1"
+        android:name="com.example.fragmentsnavigation.test_frag.test6_question1"
         android:label="Тест"
         tools:layout="@layout/fragment_test6_question1" >
         <action
@@ -89,7 +80,7 @@
     </fragment>
     <fragment
         android:id="@+id/test7_question2"
-        android:name="com.example.fragmentsnavigation.test7_question2"
+        android:name="com.example.fragmentsnavigation.test_frag.test7_question2"
         android:label="Тест"
         tools:layout="@layout/fragment_test7_question2" >
         <action
@@ -98,7 +89,7 @@
     </fragment>
     <fragment
         android:id="@+id/test8_question3"
-        android:name="com.example.fragmentsnavigation.test8_question3"
+        android:name="com.example.fragmentsnavigation.test_frag.test8_question3"
         android:label="Тест"
         tools:layout="@layout/fragment_test8_question3" >
         <action
@@ -107,7 +98,7 @@
     </fragment>
     <fragment
         android:id="@+id/test9_question4"
-        android:name="com.example.fragmentsnavigation.test9_question4"
+        android:name="com.example.fragmentsnavigation.test_frag.test9_question4"
         android:label="Тест"
         tools:layout="@layout/fragment_test9_question4" >
         <action
@@ -116,7 +107,7 @@
     </fragment>
     <fragment
         android:id="@+id/test10_question5"
-        android:name="com.example.fragmentsnavigation.test10_question5"
+        android:name="com.example.fragmentsnavigation.test_frag.test10_question5"
         android:label="Тест"
         tools:layout="@layout/fragment_test10_question5" >
         <action
@@ -125,7 +116,7 @@
     </fragment>
     <fragment
         android:id="@+id/test11"
-        android:name="com.example.fragmentsnavigation.test11"
+        android:name="com.example.fragmentsnavigation.test_frag.test11"
         android:label="Тест"
         tools:layout="@layout/fragment_test11" >
         <action
@@ -134,7 +125,7 @@
     </fragment>
     <fragment
         android:id="@+id/test12"
-        android:name="com.example.fragmentsnavigation.test12"
+        android:name="com.example.fragmentsnavigation.test_frag.test12"
         android:label="Тест"
         tools:layout="@layout/fragment_test12" >
         <action

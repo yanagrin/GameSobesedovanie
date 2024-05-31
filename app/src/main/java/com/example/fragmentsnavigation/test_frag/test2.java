@@ -1,4 +1,4 @@
-package com.example.fragmentsnavigation;
+package com.example.fragmentsnavigation.test_frag;
 
 import android.os.Bundle;
 
@@ -9,27 +9,26 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.TextView;
+
+import com.example.fragmentsnavigation.R;
+import com.example.fragmentsnavigation.User;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link test5#newInstance} factory method to
+ * Use the {@link test2#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class test5 extends Fragment {
+public class test2 extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "player";
-    private static final String ARG_PARAM2 = "profession";
-    private static final String ARG_PARAM3 = "hr";
 
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-    private String mParam3;
 
-    public test5() {
+    public test2() {
         // Required empty public constructor
     }
 
@@ -39,15 +38,13 @@ public class test5 extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment test5.
+     * @return A new instance of fragment test2.
      */
     // TODO: Rename and change types and number of parameters
-    public static test5 newInstance(String param1, String param2, String param3) {
-        test5 fragment = new test5();
+    public static test2 newInstance(String param1, String param2) {
+        test2 fragment = new test2();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        args.putString(ARG_PARAM3, param3);
         fragment.setArguments(args);
         return fragment;
     }
@@ -57,31 +54,33 @@ public class test5 extends Fragment {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-            mParam3 = getArguments().getString(ARG_PARAM3);
         }
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_test5, container, false);
-        TextView tv = view.findViewById(R.id.TV);
-        if (mParam3.equals("woman")){
-            tv.setText("Добрый день, меня зовут Анна. Давайте начнем собеседование");
-        }
-        else {
-            tv.setText("Добрый день, меня зовут Валерия Аполлоновна. Давайте начнем собеседование");
-        }
-        Button start = view.findViewById(R.id.START);
-        start.setOnClickListener(new View.OnClickListener() {
+        View view = inflater.inflate(R.layout.fragment_test2, container, false);
+        Button b1 = view.findViewById(R.id.BT1);
+        b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Bundle bundle = new Bundle();
                 bundle.putString("player", mParam1);
-                bundle.putString("profession", mParam2);
-                bundle.putString("hr", mParam3);
-                Navigation.findNavController(view).navigate(R.id.action_test5_to_test6_question1, bundle);
+                bundle.putString("profession", "seller");
+                User.profession_on_last_try = "seller";
+                Navigation.findNavController(view).navigate(R.id.action_test2_to_test3, bundle);
+            }
+        });
+        Button b2 = view.findViewById(R.id.BT2);
+        b2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Bundle bundle = new Bundle();
+                bundle.putString("player", mParam1);
+                bundle.putString("profession", "programmer");
+                User.profession_on_last_try = "programmer";
+                Navigation.findNavController(view).navigate(R.id.action_test2_to_test3, bundle);
             }
         });
         return view;

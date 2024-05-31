@@ -1,4 +1,4 @@
-package com.example.fragmentsnavigation;
+package com.example.fragmentsnavigation.test_frag;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,6 +15,7 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
+import com.example.fragmentsnavigation.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class Game extends AppCompatActivity {
@@ -35,6 +36,7 @@ public class Game extends AppCompatActivity {
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNW);
         NavController navController = Navigation.findNavController(this, R.id.my_nav_host_frag);
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph())

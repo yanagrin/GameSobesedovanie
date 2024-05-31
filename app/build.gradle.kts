@@ -50,6 +50,12 @@ dependencies {
 
     implementation("com.google.firebase:firebase-auth")
 
+    // Room
+    implementation("androidx.room:room-runtime:2.6.1")
+    annotationProcessor("androidx.room:room-compiler:2.6.1")
+    //implementation(libs.room.runtime)
+    //annotationProcessor(libs.room.compiler)
+
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)

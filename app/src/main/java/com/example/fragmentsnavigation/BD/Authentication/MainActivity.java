@@ -1,4 +1,4 @@
-package com.example.fragmentsnavigation;
+package com.example.fragmentsnavigation.BD.Authentication;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,15 +12,11 @@ import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
-import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
-import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
 
-import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.example.fragmentsnavigation.R;
+import com.example.fragmentsnavigation.User;
+import com.example.fragmentsnavigation.test_frag.Game;
 
 public class MainActivity extends AppCompatActivity {
     Boolean f = true;
@@ -67,6 +63,7 @@ public class MainActivity extends AppCompatActivity {
                     authentication.login_or_register(usernameEditText.getText(), passwordEditText.getText(), new LoginCallback() {
                         @Override
                         public void onLoginSuccess() {
+                            Log.d("BBB","aaaa");
                             User.email = String.valueOf(usernameEditText.getText());
 
                             Intent intent = new Intent(MainActivity.this, Game.class);
@@ -76,6 +73,7 @@ public class MainActivity extends AppCompatActivity {
 
                         @Override
                         public void onLoginFailure(String errorMessage) {
+
                             // Обработка ошибки регистрации
                         }
                     });

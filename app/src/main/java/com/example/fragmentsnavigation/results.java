@@ -1,12 +1,25 @@
 package com.example.fragmentsnavigation;
 
+import android.content.Context;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.LiveData;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProvider;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
+
+import com.example.fragmentsnavigation.BD.UserListAdapter;
+import com.example.fragmentsnavigation.BD.UserViewModel;
+import com.example.fragmentsnavigation.BD.userLocalBD.UserLocalBD;
+
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -23,7 +36,8 @@ public class results extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-
+    private UserListAdapter adapter;
+    private RecyclerView recyclerView;
     public results() {
         // Required empty public constructor
     }
@@ -58,7 +72,41 @@ public class results extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_results, container, false);
+        View view = inflater.inflate(R.layout.fragment_results, container, false);
+        /*RecyclerView recyclerView;
+        RecyclerView.Adapter adapter;
+        recyclerView = view.findViewById(R.id.recyclerView);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        String[] data = {"Item 1", "Item 2", "Item 3"}; // Пример данных
+        adapter = new RecyclerView.Adapter(data) {
+        };
+        recyclerView.setAdapter(adapter);*/
+
+
+
+        if (User.q_of_tests>0){
+
+        }
+        recyclerView = view.findViewById(R.id.recyclerview);
+        adapter = new UserListAdapter(new UserListAdapter.UserDiff());
+        recyclerView.setAdapter(adapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        UserViewModel userViewModel = new ViewModelProvider(this).get(UserViewModel .class);
+
+
+        userViewModel.getAllUsers().observe(getViewLifecycleOwner(), new Observer<List<UserLocalBD>>() {
+            @Override
+            public void onChanged(List<UserLocalBD> users) {
+                // Обновление кэша пользователей в адаптере.
+                adapter.submitList(users);
+            }
+        });
+
+        return view;
+
+
     }
+
+
 }

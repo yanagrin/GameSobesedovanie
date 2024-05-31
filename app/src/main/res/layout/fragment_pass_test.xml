@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="#c8a99e"
-    tools:context=".pass_test">
+    tools:context=".test_frag.pass_test">
 
 
     <!-- TODO: Update blank fragment layout -->

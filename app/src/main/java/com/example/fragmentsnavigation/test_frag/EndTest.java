@@ -1,21 +1,19 @@
-package com.example.fragmentsnavigation;
+package com.example.fragmentsnavigation.test_frag;
 
 import android.util.Log;
 
 import androidx.annotation.NonNull;
 
+import com.example.fragmentsnavigation.BD.Authentication.BDuser;
+import com.example.fragmentsnavigation.User;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.DocumentReference;
-import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
-
-import java.util.HashMap;
-import java.util.Map;
 
 public class EndTest {
     int test_results=-1;
@@ -123,8 +121,8 @@ public class EndTest {
                         @Override
                         public void onSuccess(DocumentReference documentReference) {
                             //documentReference.update("number_of_try", 9);
-                            User.id = documentReference.getId();
-                            Log.d("BBBok", "DocumentSnapshot added with ID: " + documentReference.getId());
+                            //User.id = documentReference.getId();
+                            //Log.d("BBBok", "DocumentSnapshot added with ID: " + documentReference.getId());
                         }
                     })
                     .addOnFailureListener(new OnFailureListener() {

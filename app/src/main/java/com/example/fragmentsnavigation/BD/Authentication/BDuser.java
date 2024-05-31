@@ -1,4 +1,4 @@
-package com.example.fragmentsnavigation;
+package com.example.fragmentsnavigation.BD.Authentication;
 
 public class BDuser {
     public String email="";

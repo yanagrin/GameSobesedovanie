@@ -1,4 +1,4 @@
-package com.example.fragmentsnavigation;
+package com.example.fragmentsnavigation.test_frag;
 
 import android.os.Bundle;
 
@@ -12,12 +12,15 @@ import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.TextView;
 
+import com.example.fragmentsnavigation.R;
+
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link test9_question4#newInstance} factory method to
+ * Use the {@link test10_question5#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class test9_question4 extends Fragment {
+public class test10_question5 extends Fragment {
+
     String question, ans1, ans2, ans3, chooseAns="-1", ball="-1";
     private static final String ARG_PARAM1 = "player";
     private static final String ARG_PARAM2 = "profession";
@@ -25,8 +28,10 @@ public class test9_question4 extends Fragment {
     private static final String ARG_PARAM4 = "q1";
     private static final String ARG_PARAM5 = "q2";
     private static final String ARG_PARAM6 = "q3";
-    private String mParam1, mParam2, mParam3, mParam4, mParam5, mParam6;
-    public test9_question4() {
+    private static final String ARG_PARAM7 = "q4";
+    private String mParam1, mParam2, mParam3, mParam4, mParam5, mParam6, mParam7;
+
+    public test10_question5() {
         // Required empty public constructor
     }
 
@@ -36,11 +41,11 @@ public class test9_question4 extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment test9_question4.
+     * @return A new instance of fragment test10_question5.
      */
     // TODO: Rename and change types and number of parameters
-    public static test9_question4 newInstance(String param1, String param2) {
-        test9_question4 fragment = new test9_question4();
+    public static test10_question5 newInstance(String param1, String param2) {
+        test10_question5 fragment = new test10_question5();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -58,13 +63,14 @@ public class test9_question4 extends Fragment {
             mParam4 = getArguments().getString(ARG_PARAM4);
             mParam5 = getArguments().getString(ARG_PARAM5);
             mParam6 = getArguments().getString(ARG_PARAM6);
+            mParam7 = getArguments().getString(ARG_PARAM7);
         }
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_test9_question4, container, false);
+        View view = inflater.inflate(R.layout.fragment_test10_question5, container, false);
 
         TextView tv = view.findViewById(R.id.TV);
         RadioButton v1 =  view.findViewById(R.id.V1);
@@ -121,25 +127,25 @@ public class test9_question4 extends Fragment {
                 bundle.putString("q1", mParam4);
                 bundle.putString("q2", mParam5);
                 bundle.putString("q3", mParam6);
-                bundle.putString("q4", ball);
-                Navigation.findNavController(view).navigate(R.id.action_test9_question4_to_test10_question5, bundle);
+                bundle.putString("q4", mParam7);
+                bundle.putString("q5", ball);
+                Navigation.findNavController(view).navigate(R.id.action_test10_question5_to_test11, bundle);
             }
         });
         return view;
     }
-
     protected void set_text_fields() {
         if (mParam2.equals("seller")){
-            question="Как вы решаете конфликты в команде?";
-            ans3="Провожу обсуждение и нахожу компромиссное решение";
-            ans2="Принимаю решение самостоятельно";
-            ans1="Игнорирую конфликты";
+            question="Как вы мотивируете свою команду?";
+            ans1="Поощряю достижения и успехи";
+            ans2="Предоставляю возможность развития и обучения";
+            ans3="Не знаю, надеюсь на внутреннюю мотивацию";
         }
         else {
-            question="Какой из следующих языков программирования является объектно-ориентированным?";
-            ans1="С";
-            ans3="Python";
-            ans2="PHP";
-        }
+            question="Что такое API?";
+            ans1="описание способов взаимодействия одной компьютерной программы с другими";
+            ans2="Специальный вид базы данных";
+            ans3="Язык программирования";
+            }
     }
 }

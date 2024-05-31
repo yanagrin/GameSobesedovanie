@@ -1,11 +1,10 @@
-package com.example.fragmentsnavigation;
+package com.example.fragmentsnavigation.test_frag;
 
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,24 +12,23 @@ import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.TextView;
 
+import com.example.fragmentsnavigation.R;
+
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link test7_question2#newInstance} factory method to
+ * Use the {@link test8_question3#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class test7_question2 extends Fragment {
+public class test8_question3 extends Fragment {
     String question, ans1, ans2, ans3, chooseAns="-1", ball="-1";
-
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "player";
     private static final String ARG_PARAM2 = "profession";
     private static final String ARG_PARAM3 = "hr";
     private static final String ARG_PARAM4 = "q1";
-    private String mParam1, mParam2, mParam3, mParam4;
+    private static final String ARG_PARAM5 = "q2";
+    private String mParam1, mParam2, mParam3, mParam4, mParam5;
 
-
-    public test7_question2() {
+    public test8_question3() {
         // Required empty public constructor
     }
 
@@ -40,11 +38,11 @@ public class test7_question2 extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment test7_question2.
+     * @return A new instance of fragment test8_question3.
      */
     // TODO: Rename and change types and number of parameters
-    public static test7_question2 newInstance(String param1, String param2) {
-        test7_question2 fragment = new test7_question2();
+    public static test8_question3 newInstance(String param1, String param2) {
+        test8_question3 fragment = new test8_question3();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -60,14 +58,14 @@ public class test7_question2 extends Fragment {
             mParam2 = getArguments().getString(ARG_PARAM2);
             mParam3 = getArguments().getString(ARG_PARAM3);
             mParam4 = getArguments().getString(ARG_PARAM4);
+            mParam5 = getArguments().getString(ARG_PARAM5);
         }
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_test7_question2, container, false);
-
+        View view = inflater.inflate(R.layout.fragment_test8_question3, container, false);
         TextView tv = view.findViewById(R.id.TV);
         RadioButton v1 =  view.findViewById(R.id.V1);
         RadioButton v2 =  view.findViewById(R.id.V2);
@@ -111,7 +109,6 @@ public class test7_question2 extends Fragment {
 
         Button next = view.findViewById(R.id.NEXT);
         next.setOnClickListener(new View.OnClickListener() {
-            @Override
             public void onClick(View v) {
                 if (chooseAns.equals("-1")){
                     chooseAns="1";
@@ -122,25 +119,27 @@ public class test7_question2 extends Fragment {
                 bundle.putString("profession", mParam2);
                 bundle.putString("hr", mParam3);
                 bundle.putString("q1", mParam4);
-                bundle.putString("q2", ball);
-                Navigation.findNavController(view).navigate(R.id.action_test7_question2_to_test8_question3, bundle);
+                bundle.putString("q2", mParam5);
+                bundle.putString("q3", ball);
+                Navigation.findNavController(view).navigate(R.id.action_test8_question3_to_test9_question4, bundle);
             }
         });
         return view;
     }
-
     protected void set_text_fields() {
         if (mParam2.equals("seller")){
-            question="Как вы будете решать проблему, если один из сотрудников начнет утверждать, что он является наследником престола и требует королевские привилегии на работе? ";
-            ans1="Пока он не предоставит документы о своем родословном древе и праве на престол, давайте продолжим работать как обычно. Но если у него есть дракон, то это уже серьезный разговор!";
-            ans2="Ну конечно, конечно, ваше величество! Давайте сразу же организуем королевский бал вместо обеденного перерыва!";
-            ans3="Уволю его, никто не смеет претендовать на мое место";
+            question="Продайте мне эту ручку";
+            ans3="ну, ээээ";
+            ans2="Каждое слово, написанное этой ручкой, становится частью истории и отзовется в вечности";
+            ans1="Эта ручка - ваш личный переводчик мыслей в слова, который поможет вам выразить все, что у вас на сердце, даже если это звучит странно";
         }
         else {
-            question="Как вы объясните своей бабушке, что такое \"интерфейс\" в Java? ";
-            ans1="Бабушка, интерфейс в Java - это как магический пульт управления, который говорит классам, какие кнопки им нажимать для правильной работы.";
-            ans2="Бабушка, представьте себе, что интерфейс в Java - это как рамка для картины: он определяет форму и структуру, которую должны соблюдать классы при создании своего произведения искусства";
-            ans3="Бабушка, интерфейс в Java - это как рецепт для приготовления блюда: если класс следует всем шагам, то получится вкусный и работающий код";
+            question="Как вы решаете проблемы с производительностью в мобильных приложениях?";
+            ans1="Оптимизирую код";
+            ans3="Оптимизирую работу с памятью";
+            ans2="Провожу тестирование на разных устройствах";
         }
     }
+
+
 }
